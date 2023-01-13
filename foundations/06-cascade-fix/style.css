@@ -1,42 +1,46 @@
 body{
-  font-family:Arial, Helvetica, sans-serif
-}
+    font-family:Arial, Helvetica, sans-serif
+  }
+  
+  .para,
+  .small-para {
+    color: hsl(0, 0%, 0%);
+    font-weight: 800;
+  }
+  
+  .para { /* Moved .para selector above .small-para selector in file to get proper results */
+    font-size: 22px;
+  }
 
-.para,
-.small-para {
-  color: hsl(0, 0%, 0%);
-  font-weight: 800;
-}
+  .small-para {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  
+  #confirm-button { /* Removed original .confirm selector and replaced with id selector*/
+                    /* Could have been more specific with .button.confirm*/
+                    /* Or could have placed original .confirm selector below .button selector*/
+    background: green;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+  }
+  
+  div.text {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 100;
+  }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.para {
-  font-size: 22px;
-}
-
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
-
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
-
-div.text {
-  color: rgb(0, 0, 0);
-  font-size: 22px;
-  font-weight: 100;
-}
+   div .child { /* Moved .child selector below div.txt selctor then added div for descendant combinator*/
+                /* Could have been more specific with .text .child descendant combinator instead*/
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 14px;
+  }
